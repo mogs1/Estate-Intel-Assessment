@@ -7,25 +7,6 @@ A REST API built with Laravel that proxies the Ice And Fire API and provides loc
 - PHP 8.1+
 - Composer
 
-## Setup
-
-```bash or powershell
-git clone <your-repo-url>
-cd books-api
-composer install
-cp .env.example .env
-php artisan key:generate
-touch database/database.sqlite
-php artisan migrate
-php artisan serve
-```
-
-## Running Tests
-
-```bash or powershell
-php artisan test
-```
-
 ## Endpoints
 
 | Method | URL | Description |
@@ -59,8 +40,6 @@ php artisan test
 
 You should see 10 tests passing.
 
-## API Endpoints
-
 ### External Books (Ice And Fire API)
 
 | Method | Endpoint | Description |
@@ -85,15 +64,6 @@ You should see 10 tests passing.
     ]
 }
 ```
-
-### Local Books CRUD
-
-| Method | Endpoint | Description |
-| POST | `/api/v1/books` | Create a book |
-| GET | `/api/v1/books` | List all books |
-| GET | `/api/v1/books/{id}` | Show a single book |
-| PATCH | `/api/v1/books/{id}` | Update a book |
-| DELETE | `/api/v1/books/{id}` | Delete a book |
 
 The list endpoint supports search filters:
 
